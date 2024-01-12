@@ -87,11 +87,19 @@ while True:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
                 dx = -1
+            if event.key == pygame.K_LEFT:
+                dx = -1
             elif event.key == pygame.K_d:
+                dx = 1
+            elif event.key == pygame.K_RIGHT:
                 dx = 1
             elif event.key == pygame.K_s:
                 anim_limit = 100
+            elif event.key == pygame.K_DOWN:
+                anim_limit = 100
             elif event.key == pygame.K_w:
+                rotate = True
+            elif event.key == pygame.K_UP:
                 rotate = True
     
     for event in pygame.event.get():
