@@ -102,19 +102,6 @@ while True:
             elif event.key == pygame.K_UP:
                 rotate = True
     
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            exit()
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                dx = -1
-            elif event.key == pygame.K_RIGHT:
-                dx = 1
-            elif event.key == pygame.K_DOWN:
-                anim_limit = 100
-            elif event.key == pygame.K_UP:
-                rotate = True
-    
     figure_old = deepcopy(figure)
     for i in range(4):
         figure[i].x += dx
